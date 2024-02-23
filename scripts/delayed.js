@@ -5,3 +5,31 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 
 // add more delayed functionality here
+async function loadScript(src, parent, attrs) {
+  return new Promise((resolve, reject) => {
+    if (!document.querySelector(`${parent} > script[src="${src}"]`)) {
+      const script = document.createElement('script');
+      script.src = src;
+      if (attrs) {
+        // eslint-disable-next-line no-restricted-syntax, guard-for-in
+        for (const attr in attrs) {
+          script.setAttribute(attr, attrs[attr]);
+        }
+      }
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.append(script);
+    } else {
+      resolve();
+    }
+  });
+}
+
+// Load Launch properties (adobedtm)
+if (window.location.host.startsWith('localhost')) {
+  await loadScript('https://assets.adobedtm.com/78af697641c3/8c86e24f92f7/launch-159c1d47c2de.min.js', 'head', { async: true });
+} else if (window.location.host.endsWith('.page')) {
+  await loadScript('https://assets.adobedtm.com/78af697641c3/8c86e24f92f7/launch-159c1d47c2de.min.js', 'head', { async: true });
+} else {
+  await loadScript('https://assets.adobedtm.com/78af697641c3/8c86e24f92f7/launch-159c1d47c2de.min.js', 'head', { async: true });
+}
