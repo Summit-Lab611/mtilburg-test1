@@ -159,6 +159,7 @@ async function initCTInternal(context, parent = document, defaultFormConversionN
 // where the context is passed as first parameter and made available in the "this" object.
 export async function initConversionTracking(parent = document, defaultFormConversionName = '') {
   initCTInternal(this, parent, defaultFormConversionName);
+  console.log ("here");
 }
 
 // Add support for Plugin system
