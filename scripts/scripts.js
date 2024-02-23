@@ -24,6 +24,10 @@ const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 // Add you plugins below
 // window.hlx.plugins.add('/plugins/my-plugin.js');
+window.hlx.plugins.add('rum-conversion', {
+  url: '/plugins/rum-conversion/src/index.js',
+  load: 'lazy',
+});
 
 const AUDIENCES = {
   mobile: () => window.innerWidth < 600,
