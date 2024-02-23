@@ -10,7 +10,7 @@ sampleRUM('cwv');
 //await loadScript('https://assets.adobedtm.com/6a74768abd57/ae0061acbe82/launch-3ee9ff2398b5-development.min.js', 'head', { async: true });
 
 // Summit
-await loadScript('https://assets.adobedtm.com/78af697641c3/8c86e24f92f7/launch-159c1d47c2de.min.js'/*, 'head'*/, { async: true });
+await loadScript('https://assets.adobedtm.com/78af697641c3/8c86e24f92f7/launch-159c1d47c2de.min.js', { async: true });
 
 /*
 // Load Launch properties (adobedtm)
