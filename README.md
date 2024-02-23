@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--Summit-Lab611.hlx.page/
-- Live: https://main--{repo}--Summit-Lab611.hlx.live/
+- Preview: https://main--mtilburg-test1--Summit-Lab611.hlx.page/
+- Live: https://main--mtilburg-test1--Summit-Lab611.hlx.live/
 
 ## Installation
 
